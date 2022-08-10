@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int n,s,i=0,j=1;
+    printf("Enter any number");
+    scanf("%d",&n);
+    int x,y;
+    printf("Enter x and y values");
+    scanf("%d %d",&x,&y);
+    while(n>0)//1691
+    {
+        s=n%10;//s=9
+        if(s==x)
+        i=i+y*j;//i=87
+        else
+        i=i+s*j;
+        j=j*10;//j=100
+        n=n/10;//169
+    }
+    printf("%d",i);
+
+    return 0;
+}
+
+OUTPUT:Enter number n:16918
+       Enter x and y values 1 7
+       76978
+OUTPUT:Enter number n:12345
+       Enter x and y values:3 9
+       12945
